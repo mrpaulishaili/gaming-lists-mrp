@@ -13,10 +13,7 @@ const Home = () => {
   }, []);
 
   const getGameListByGenreId = (id: number) => {
-    console.log(id);
-
     globalApi.getGameListByGenreId(id).then((res) => {
-      console.log(res.data.results);
       setGameListByGenre(res.data.results);
     });
   };

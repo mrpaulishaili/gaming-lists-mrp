@@ -15,10 +15,7 @@ const GenreList = ({ genreId }: GenreListProps) => {
 
   const getGenreList = () => {
     globalApi.getGenreList.then((res) => {
-      const n = res.data.results;
-      console.log(n);
-
-      return setGenreList(n);
+      return setGenreList(res.data.results);
     });
   };
 
